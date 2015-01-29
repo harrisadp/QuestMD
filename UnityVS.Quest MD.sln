@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Quest MD.CSharp.Editor", "UnityVS.Quest MD.CSharp.Editor.csproj", "{713A9598-8758-B1DC-E770-99F21177F970}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Quest MD.CSharp", "UnityVS.Quest MD.CSharp.csproj", "{2D450825-47A5-2222-7EF1-7FE068AF9DA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Quest MD.CSharp.Plugins", "UnityVS.Quest MD.CSharp.Plugins.csproj", "{27A3BEEE-3F39-CDEB-BB96-B4CD78E31B78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Quest MD.CSharp.Editor.Plugins", "UnityVS.Quest MD.CSharp.Editor.Plugins.csproj", "{A8B33FA7-8A70-D193-E420-686674FD0F8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{713A9598-8758-B1DC-E770-99F21177F970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713A9598-8758-B1DC-E770-99F21177F970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713A9598-8758-B1DC-E770-99F21177F970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713A9598-8758-B1DC-E770-99F21177F970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D450825-47A5-2222-7EF1-7FE068AF9DA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D450825-47A5-2222-7EF1-7FE068AF9DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D450825-47A5-2222-7EF1-7FE068AF9DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D450825-47A5-2222-7EF1-7FE068AF9DA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27A3BEEE-3F39-CDEB-BB96-B4CD78E31B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27A3BEEE-3F39-CDEB-BB96-B4CD78E31B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27A3BEEE-3F39-CDEB-BB96-B4CD78E31B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27A3BEEE-3F39-CDEB-BB96-B4CD78E31B78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8B33FA7-8A70-D193-E420-686674FD0F8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8B33FA7-8A70-D193-E420-686674FD0F8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8B33FA7-8A70-D193-E420-686674FD0F8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8B33FA7-8A70-D193-E420-686674FD0F8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.54548514, y: 3.22456312, z: -2.41164255}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e80205116bfdeb4bbe9365a8daa352a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inOverworld: 0
+  overWorldCam: {fileID: 0}
+  battleCam: {fileID: 0}
+  spawnObject: {fileID: 0}
+  tempSpawnPrefab: {fileID: 100000, guid: d9912c1053bf723438900e029479dc9a, type: 2}
+  diseases: []
+  actions: []
+  treatments: []
+  path: Assets/JSONFiles/
+  blockingPlane: {fileID: 0}
+  possibleSprites:
+  - {fileID: 21300000, guid: 10a5b8c8ce9778143baf56a1414e8044, type: 3}
+  - {fileID: 21300000, guid: 1e336d5e61b697c42b64db4c89d107a3, type: 3}
+  - {fileID: 21300000, guid: 348f4baa7aa277a47a3ed2e70a2d1821, type: 3}
+  - {fileID: 21300000, guid: bec90dbbb3160d845a90ad456d841f93, type: 3}
+  - {fileID: 21300000, guid: 714753a5fbbea7f48ab689e288e446ba, type: 3}
+  - {fileID: 21300000, guid: ebc0ccb0fb917c344b8dbb68f17a68dc, type: 3}
+  - {fileID: 21300000, guid: 27c40a357d4699547b4fe3bdb742988f, type: 3}
+  - {fileID: 21300000, guid: fccd8beb39182c54f9640858047e7895, type: 3}
+  - {fileID: 21300000, guid: 98c679b982e17204d82f18e3703c9f22, type: 3}
+  - {fileID: 21300000, guid: c877174ca49b48e41bc2679f688d95f3, type: 3}
+  - {fileID: 21300000, guid: 3cf1dab828084694498a95335cbaee6d, type: 3}
+  - {fileID: 21300000, guid: 92a16aa2b75da8d48826284ea419c520, type: 3}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482c28e74a3fb5f4c90ab653b4a3ca02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patient: {fileID: 0}
+  doctor: {fileID: 0}
+  enemy: {fileID: 0}
+  healthSlider: {fileID: 0}
+  topLevelButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  historyButtons: []
+  physicalButtons: []
+  labButtons: []
+  imagingButtons: []
+  buttonPrefab: {fileID: 11400002, guid: 7e2edb8330edefb4992c2dbb02b78a57, type: 2}
+  canvas: {fileID: 0}
+  backButton: {fileID: 0}
+  diagnoseButton: {fileID: 0}
+  treatButton: {fileID: 0}
+  diagnoseImage: {fileID: 0}
+  diagnosePanel: {fileID: 0}
+  diagnoseButtons: {fileID: 11400004, guid: 6bf4b315bd243bc4591d577350c07840, type: 2}
+  treatmentImage: {fileID: 0}
+  treatPanel: {fileID: 0}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8718f47e1270d4b4ea6ea9e2a5ba223a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubble: {fileID: 100000, guid: 210b2e328427e72479a42dad9a285b66, type: 2}
+  doctorPos: {fileID: 0}
+  assistantPos: {fileID: 0}
+  patientPos: {fileID: 0}
+  image: {fileID: 0}
+  text: {fileID: 0}
+  readyForMore: 0
+  log: {fileID: 0}
+  actualLog: {fileID: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
