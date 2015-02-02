@@ -15,7 +15,8 @@ public class Demographic
 	public enum Race{
 		White,
 		Black,
-		Asian
+		Asian,
+		Hispanic
 	};
 
 	public Sex sex;

@@ -52,19 +52,54 @@ public class Person : MonoBehaviour {
 		CAT_ASIAN = 44,
 		CAT_BLACK = 45,
 		CAT_HISPANIC = 46,
-		CAT_WHITE = 47
+		CAT_WHITE = 47,
+		BAKER_ASIAN = 48,
+		BAKER_BLACK = 49,
+		BAKER_HISPANIC = 50,
+		BAKER_WHITE = 51,
+		WALKER_ASIAN = 52,
+		WALKER_BLACK = 53,
+		WALKER_HISPANIC = 54,
+		WALKER_WHITE = 55,
+		PIGTAILS_ASIAN = 56,
+		PIGTAILS_BLACK = 57,
+		PIGTAILS_HISPANIC = 58,
+		PIGTAILS_WHITE = 59,
+		SPORTSGIRL_ASIAN = 60,
+		SPORTSGIRL_BLACK = 61,
+		SPORTSGIRL_HISPANIC = 62,
+		SPORTSGIRL_WHITE = 63,
+		CHUBBY_ASIAN = 64,
+		CHUBBY_BLACK = 65,
+		CHUBBY_HISPANIC = 66,
+		CHUBBY_WHITE = 67,
+		MOM_ASIAN = 68,
+		MOM_BLACK = 69,
+		MOM_HISPANIC = 70,
+		MOM_WHITE = 71,
+		GOATEE_ASIAN = 72,
+		GOATEE_BLACK = 73,
+		GOATEE_HISPANIC = 74,
+		GOATEE_WHITE = 75
 	}
 
 	public enum Personality{
 		Jock,
 		Sweet,
-		Cat,
 		Dandy,
 		Dad,
 		Police,
-		Ugg,
 		Princess,
 		Sports,
+		Ugg,
+		Cat,
+		Baker,
+		Walker,
+		Pigtails,
+		Sportsgirl,
+		Chubby,
+		Mom,
+		Goatee,
 		Default
 	};
 
@@ -95,7 +130,7 @@ public class Person : MonoBehaviour {
 
 		if (dems.sex == Demographic.Sex.Female && dems.age == Demographic.Age.Old) {
 			float roll = Random.Range (0.0f, 1.0f);
-			if(roll <= 0.5f){
+			if(roll <= 0.33f){
 				personality = Personality.Sweet;
 				switch(dems.race)
 				{
@@ -105,8 +140,29 @@ public class Person : MonoBehaviour {
 				case Demographic.Race.Black:
 					spriteName = SpriteEnum.SWEET_BLACK;
 					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.SWEET_HISPANIC;
+					break;
 				case Demographic.Race.White:
 					spriteName = SpriteEnum.SWEET_WHITE;
+					break;
+				}
+			}
+			else if(roll <=0.66f){
+				personality = Personality.Baker;
+				switch(dems.race)
+				{
+				case Demographic.Race.Asian:
+					spriteName = SpriteEnum.BAKER_ASIAN;
+					break;
+				case Demographic.Race.Black:
+					spriteName = SpriteEnum.BAKER_BLACK;
+					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.BAKER_HISPANIC;
+					break;
+				case Demographic.Race.White:
+					spriteName = SpriteEnum.BAKER_WHITE;
 					break;
 				}
 			}
@@ -120,6 +176,9 @@ public class Person : MonoBehaviour {
 				case Demographic.Race.Black:
 					spriteName = SpriteEnum.CAT_BLACK;
 					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.CAT_HISPANIC;
+					break;
 				case Demographic.Race.White:
 					spriteName = SpriteEnum.CAT_WHITE;
 					break;
@@ -129,7 +188,7 @@ public class Person : MonoBehaviour {
 
 		if (dems.sex == Demographic.Sex.Female && dems.age == Demographic.Age.Middle) {
 			float roll = Random.Range(0.0f, 1.0f);
-			if(roll <= 0.33f){
+			if(roll <= 0.25f){
 				personality = Personality.Default;
 				switch(dems.race)
 				{
@@ -139,12 +198,15 @@ public class Person : MonoBehaviour {
 				case Demographic.Race.Black:
 					spriteName = SpriteEnum.DEFAULT_WOMAN_BLACK;
 					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.DEFAULT_WOMAN_HISPANIC;
+					break;
 				case Demographic.Race.White:
 					spriteName = SpriteEnum.DEFAULT_WOMAN_WHITE;
 					break;
 				}
 			}
-			else if(roll <=0.66f){
+			else if(roll <=0.5f){
 				personality = Personality.Police;
 				switch(dems.race)
 				{
@@ -154,8 +216,29 @@ public class Person : MonoBehaviour {
 				case Demographic.Race.Black:
 					spriteName = SpriteEnum.POLICE_BLACK;
 					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.POLICE_HISPANIC;
+					break;
 				case Demographic.Race.White:
 					spriteName = SpriteEnum.POLICE_WHITE;
+					break;
+				}
+			}
+			else if(roll <=0.75f){
+				personality = Personality.Mom;
+				switch(dems.race)
+				{
+				case Demographic.Race.Asian:
+					spriteName = SpriteEnum.MOM_ASIAN;
+					break;
+				case Demographic.Race.Black:
+					spriteName = SpriteEnum.MOM_BLACK;
+					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.MOM_HISPANIC;
+					break;
+				case Demographic.Race.White:
+					spriteName = SpriteEnum.MOM_WHITE;
 					break;
 				}
 			}
@@ -169,6 +252,9 @@ public class Person : MonoBehaviour {
 				case Demographic.Race.Black:
 					spriteName = SpriteEnum.UGG_BLACK;
 					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.UGG_HISPANIC;
+					break;
 				case Demographic.Race.White:
 					spriteName = SpriteEnum.UGG_WHITE;
 					break;
@@ -177,40 +263,106 @@ public class Person : MonoBehaviour {
 		}
 
 		if (dems.sex == Demographic.Sex.Female && dems.age == Demographic.Age.Young) {
-			personality = Personality.Princess;
-			switch(dems.race)
-			{
-			case Demographic.Race.Asian:
-				spriteName = SpriteEnum.PRINCESS_ASIAN;
-				break;
-			case Demographic.Race.Black:
-				spriteName = SpriteEnum.PRINCESS_BLACK;
-				break;
-			case Demographic.Race.White:
-				spriteName = SpriteEnum.PRINCESS_WHITE;
-				break;
+			float roll = Random.Range (0.0f, 1.0f);
+			if(roll <= 0.33f){
+				personality = Personality.Princess;
+				switch(dems.race)
+				{
+				case Demographic.Race.Asian:
+					spriteName = SpriteEnum.PRINCESS_ASIAN;
+					break;
+				case Demographic.Race.Black:
+					spriteName = SpriteEnum.PRINCESS_BLACK;
+					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.PRINCESS_HISPANIC;
+					break;
+				case Demographic.Race.White:
+					spriteName = SpriteEnum.PRINCESS_WHITE;
+					break;
+				}
+			}
+			else if(roll <=0.66f){
+				personality = Personality.Pigtails;
+				switch(dems.race)
+				{
+				case Demographic.Race.Asian:
+					spriteName = SpriteEnum.PIGTAILS_ASIAN;
+					break;
+				case Demographic.Race.Black:
+					spriteName = SpriteEnum.PIGTAILS_BLACK;
+					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.PIGTAILS_HISPANIC;
+					break;
+				case Demographic.Race.White:
+					spriteName = SpriteEnum.PIGTAILS_WHITE;
+					break;
+				}
+			}
+			else {
+				personality = Personality.Sportsgirl;
+				switch(dems.race)
+				{
+				case Demographic.Race.Asian:
+					spriteName = SpriteEnum.SPORTSGIRL_ASIAN;
+					break;
+				case Demographic.Race.Black:
+					spriteName = SpriteEnum.SPORTSGIRL_BLACK;
+					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.SPORTSGIRL_HISPANIC;
+					break;
+				case Demographic.Race.White:
+					spriteName = SpriteEnum.SPORTSGIRL_WHITE;
+					break;
+				}
 			}
 		}
 
 		if (dems.sex == Demographic.Sex.Male && dems.age == Demographic.Age.Old) {
-			personality = Personality.Dandy;
-			switch(dems.race)
-			{
-			case Demographic.Race.Asian:
-				spriteName = SpriteEnum.DANDY_ASIAN;
-				break;
-			case Demographic.Race.Black:
-				spriteName = SpriteEnum.DANDY_BLACK;
-				break;
-			case Demographic.Race.White:
-				spriteName = SpriteEnum.DANDY_WHITE;
-				break;
+			float roll = Random.Range (0.0f, 1.0f);
+			if(roll <= 0.5f){
+				personality = Personality.Dandy;
+				switch(dems.race)
+				{
+				case Demographic.Race.Asian:
+					spriteName = SpriteEnum.DANDY_ASIAN;
+					break;
+				case Demographic.Race.Black:
+					spriteName = SpriteEnum.DANDY_BLACK;
+					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.DANDY_HISPANIC;
+					break;
+				case Demographic.Race.White:
+					spriteName = SpriteEnum.DANDY_WHITE;
+					break;
+				}
+			}
+			else {
+				personality = Personality.Walker;
+				switch(dems.race)
+				{
+				case Demographic.Race.Asian:
+					spriteName = SpriteEnum.WALKER_ASIAN;
+					break;
+				case Demographic.Race.Black:
+					spriteName = SpriteEnum.WALKER_BLACK;
+					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.WALKER_HISPANIC;
+					break;
+				case Demographic.Race.White:
+					spriteName = SpriteEnum.WALKER_WHITE;
+					break;
+				}
 			}
 		}
 
 		if (dems.sex == Demographic.Sex.Male && dems.age == Demographic.Age.Middle) {
 			float roll = Random.Range(0.0f, 1.0f);
-			if(roll <= 0.33f){
+			if(roll <= 0.25f){
 				personality = Personality.Default;
 				switch(dems.race)
 				{
@@ -220,12 +372,15 @@ public class Person : MonoBehaviour {
 				case Demographic.Race.Black:
 					spriteName = SpriteEnum.DEFAULT_MALE_BLACK;
 					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.DEFAULT_MALE_HISPANIC;
+					break;
 				case Demographic.Race.White:
 					spriteName = SpriteEnum.DEFAULT_MALE_WHITE;
 					break;
 				}
 			}
-			else if (roll <= 0.66f){
+			else if (roll <= 0.5f){
 				personality = Personality.Jock;
 				switch(dems.race)
 				{
@@ -235,8 +390,29 @@ public class Person : MonoBehaviour {
 				case Demographic.Race.Black:
 					spriteName = SpriteEnum.JOCK_BLACK;
 					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.JOCK_HISPANIC;
+					break;
 				case Demographic.Race.White:
 					spriteName = SpriteEnum.JOCK_WHITE;
+					break;
+				}
+			}
+			else if (roll <= 0.75f){
+				personality = Personality.Goatee;
+				switch(dems.race)
+				{
+				case Demographic.Race.Asian:
+					spriteName = SpriteEnum.GOATEE_ASIAN;
+					break;
+				case Demographic.Race.Black:
+					spriteName = SpriteEnum.GOATEE_BLACK;
+					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.GOATEE_HISPANIC;
+					break;
+				case Demographic.Race.White:
+					spriteName = SpriteEnum.GOATEE_WHITE;
 					break;
 				}
 			}
@@ -250,6 +426,9 @@ public class Person : MonoBehaviour {
 				case Demographic.Race.Black:
 					spriteName = SpriteEnum.DAD_BLACK;
 					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.DAD_HISPANIC;
+					break;
 				case Demographic.Race.White:
 					spriteName = SpriteEnum.DAD_WHITE;
 					break;
@@ -259,7 +438,7 @@ public class Person : MonoBehaviour {
 
 		if (dems.sex == Demographic.Sex.Male && dems.age == Demographic.Age.Young) {
 			float roll = Random.Range(0.0f, 1.0f);
-			if(roll <= 0.5f){
+			if(roll <= 0.33f){
 				personality = Personality.Default;
 				switch(dems.race)
 				{
@@ -269,8 +448,29 @@ public class Person : MonoBehaviour {
 				case Demographic.Race.Black:
 					spriteName = SpriteEnum.DEFAULT_KID_BLACK;
 					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.DEFAULT_KID_HISPANIC;
+					break;
 				case Demographic.Race.White:
 					spriteName = SpriteEnum.DEFAULT_KID_WHITE;
+					break;
+				}
+			}
+			else if (roll <= 0.66f){
+				personality = Personality.Chubby;
+				switch(dems.race)
+				{
+				case Demographic.Race.Asian:
+					spriteName = SpriteEnum.CHUBBY_ASIAN;
+					break;
+				case Demographic.Race.Black:
+					spriteName = SpriteEnum.CHUBBY_BLACK;
+					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.CHUBBY_HISPANIC;
+					break;
+				case Demographic.Race.White:
+					spriteName = SpriteEnum.CHUBBY_WHITE;
 					break;
 				}
 			}
@@ -283,6 +483,9 @@ public class Person : MonoBehaviour {
 					break;
 				case Demographic.Race.Black:
 					spriteName = SpriteEnum.SPORTS_BLACK;
+					break;
+				case Demographic.Race.Hispanic:
+					spriteName = SpriteEnum.SPORTS_HISPANIC;
 					break;
 				case Demographic.Race.White:
 					spriteName = SpriteEnum.SPORTS_WHITE;
