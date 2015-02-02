@@ -69,6 +69,27 @@ public class Disease : MonoBehaviour
 						case "cat":
 							speechKey = Person.Personality.Cat;
 							break;
+						case "baker":
+							speechKey = Person.Personality.Cat;
+							break;
+						case "walker":
+							speechKey = Person.Personality.Cat;
+							break;
+						case "pigtails":
+							speechKey = Person.Personality.Cat;
+							break;
+						case "sportsgirl":
+							speechKey = Person.Personality.Cat;
+							break;
+						case "chubby":
+							speechKey = Person.Personality.Cat;
+							break;
+						case "mom":
+							speechKey = Person.Personality.Cat;
+							break;
+						case "goatee":
+							speechKey = Person.Personality.Cat;
+							break;
 						}
 						complaint.Add(speechKey, complaintObj.list[complaintIterator].str);
 					}
@@ -166,6 +187,27 @@ public class Disease : MonoBehaviour
 									case "cat":
 										speechKey = Person.Personality.Cat;
 										break;
+									case "baker":
+										speechKey = Person.Personality.Baker;
+										break;
+									case "walker":
+										speechKey = Person.Personality.Walker;
+										break;
+									case "pigtails":
+										speechKey = Person.Personality.Pigtails;
+										break;
+									case "sportsgirl":
+										speechKey = Person.Personality.Sportsgirl;
+										break;
+									case "Chubby":
+										speechKey = Person.Personality.Cat;
+										break;
+									case "Mom":
+										speechKey = Person.Personality.Cat;
+										break;
+									case "Goatee":
+										speechKey = Person.Personality.Cat;
+										break;
 									}
 									personalityDictionary.Add (speechKey, speechObj.list[speechIterator].str);
 								}
@@ -254,6 +296,27 @@ public class Disease : MonoBehaviour
 						case "cat":
 							speechKey = Person.Personality.Cat;
 							break;
+						case "baker":
+							speechKey = Person.Personality.Baker;
+							break;
+						case "walker":
+							speechKey = Person.Personality.Walker;
+							break;
+						case "pigtails":
+							speechKey = Person.Personality.Pigtails;
+							break;
+						case "sportsgirl":
+							speechKey = Person.Personality.Sportsgirl;
+							break;
+						case "chubby":
+							speechKey = Person.Personality.Chubby;
+							break;
+						case "mom":
+							speechKey = Person.Personality.Mom;
+							break;
+						case "goatee":
+							speechKey = Person.Personality.Goatee;
+							break;
 						}
 						successResponseDictionary.Add(speechKey, successObj.list[successIterator].str);
 					}
@@ -298,6 +361,27 @@ public class Disease : MonoBehaviour
 							break;
 						case "cat":
 							speechKey = Person.Personality.Cat;
+							break;
+						case "baker":
+							speechKey = Person.Personality.Baker;
+							break;
+						case "walker":
+							speechKey = Person.Personality.Walker;
+							break;
+						case "pigtails":
+							speechKey = Person.Personality.Pigtails;
+							break;
+						case "sportsgirl":
+							speechKey = Person.Personality.Sportsgirl;
+							break;
+						case "chubby":
+							speechKey = Person.Personality.Chubby;
+							break;
+						case "mom":
+							speechKey = Person.Personality.Mom;
+							break;
+						case "goatee":
+							speechKey = Person.Personality.Goatee;
 							break;
 						}
 						failedResponseDictionary.Add(speechKey, failureObj.list[failureIterator].str);
