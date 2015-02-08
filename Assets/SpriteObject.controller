@@ -20,21 +20,6 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &110278216
-State:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Protagonist Idle 0
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Motions:
-  - {fileID: 7400000, guid: de7d70bcee5154d7e9c1d4002b6c1a6a, type: 2}
-  m_ParentStateMachine: {fileID: 110747052}
-  m_Position: {x: 84, y: 120, z: 0}
-  m_IKOnFeet: 0
-  m_Mirror: 0
-  m_Tag: 
 --- !u!1107 &110747052
 StateMachine:
   serializedVersion: 2
@@ -42,9 +27,8 @@ StateMachine:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Base Layer
-  m_DefaultState: {fileID: 110278216}
-  m_States:
-  - {fileID: 110278216}
+  m_DefaultState: {fileID: 0}
+  m_States: []
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions: {}
